@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(if \\(-not $?\\) { \"Directory does not exist or is empty\" })",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\User\\\\Downloads\\\\Site Files\" -Recurse -Force)",
+      "Bash(Select-Object -Property FullName, PSIsContainer)",
+      "Bash(Sort-Object FullName)",
+      "PowerShell(Get-ChildItem \"E:\\\\WebstormProjects\\\\ciaf-website\\\\public\" -Recurse | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\(\"E:\\\\WebstormProjects\\\\ciaf-website\\\\public\\\\\", \"\"\\) })",
+      "WebFetch(domain:www.worldaquatics.com)",
+      "WebFetch(domain:api.worldaquatics.com)"
+    ]
+  }
+}

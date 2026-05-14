@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ciaf-navy: #0d2040;
+  --ciaf-blue: #1a3d7c;
+  --ciaf-sky:  #7ecde8;
+  --ciaf-light: #f0f4fa;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-barlow text-gray-800 bg-white antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-barlow-condensed font-extrabold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .discipline-pill {
+    @apply inline-block px-2 py-0.5 rounded text-xs font-semibold uppercase tracking-wide;
+  }
+
+  .category-badge {
+    @apply inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wide;
+  }
+}
