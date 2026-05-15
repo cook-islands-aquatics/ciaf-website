@@ -45,6 +45,26 @@ export const siteSettingsSchema = defineType({
       rows: 3,
     }),
     defineField({
+      name: 'stats',
+      title: 'Stats Bar',
+      type: 'array',
+      description: 'Up to 4 stats shown in the banner below the hero. Leave empty to use defaults.',
+      of: [
+        {
+          type: 'object',
+          name: 'stat',
+          fields: [
+            defineField({ name: 'value', title: 'Value', type: 'string', description: 'e.g. "20+" or "2"' }),
+            defineField({ name: 'label', title: 'Label', type: 'string', description: 'e.g. "Olympic Athletes"' }),
+          ],
+          preview: {
+            select: { title: 'value', subtitle: 'label' },
+          },
+        },
+      ],
+      validation: (Rule) => Rule.max(4),
+    }),
+    defineField({
       name: 'facebook',
       title: 'Facebook URL',
       type: 'url',

@@ -7,7 +7,8 @@ export const siteSettingsQuery = groq`
     email, phone, address,
     facebook, instagram, twitter,
     heroImage { asset, alt, hotspot },
-    heroTitle, heroSubtitle
+    heroTitle, heroSubtitle,
+    stats[] { value, label }
   }
 `
 

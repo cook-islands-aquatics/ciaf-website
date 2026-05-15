@@ -50,7 +50,7 @@ export default async function HomePage() {
       />
 
       {/* Stats bar */}
-      <StatsBar />
+      <StatsBar stats={settings.stats} />
 
       {/* Latest News */}
       <section className="py-16 bg-white">

@@ -1,7 +1,4 @@
-interface Stat {
-  value: string
-  label: string
-}
+import type { Stat } from '@/lib/types'
 
 const DEFAULT_STATS: Stat[] = [
   { value: '2', label: 'Olympic Games' },
@@ -10,15 +7,16 @@ const DEFAULT_STATS: Stat[] = [
 ]
 
 interface StatsBarProps {
-  stats?: Stat[]
+  stats?: Stat[] | null
 }
 
-export default function StatsBar({ stats = DEFAULT_STATS }: StatsBarProps) {
+export default function StatsBar({ stats }: StatsBarProps) {
+  const items = stats && stats.length > 0 ? stats : DEFAULT_STATS
   return (
     <div className="bg-ciaf-navy text-white">
       <div className="container-wide">
         <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
-          {stats.map((stat, i) => (
+          {items.map((stat, i) => (
             <div key={i} className="flex flex-col items-center justify-center py-7 px-6 text-center">
               <span className="font-barlow-condensed font-extrabold text-4xl text-ciaf-sky leading-none">
                 {stat.value}

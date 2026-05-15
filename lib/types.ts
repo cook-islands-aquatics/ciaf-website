@@ -98,6 +98,11 @@ export interface GovernanceDocument {
   fileUrl?: string
 }
 
+export interface Stat {
+  value: string
+  label: string
+}
+
 export interface SiteSettings {
   email?: string
   phone?: string
@@ -108,6 +113,7 @@ export interface SiteSettings {
   heroImage?: SanityImage
   heroTitle?: string
   heroSubtitle?: string
+  stats?: Stat[]
 }
 
 // Minimal portable text block type (avoid importing the full lib in types)
