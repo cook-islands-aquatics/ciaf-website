@@ -20,7 +20,7 @@ interface PageProps {
 
 function getYears(results: Result[]): string[] {
   const years = results.map((r) => r.meetDate.split('-')[0])
-  return [...new Set(years)].sort((a, b) => Number(b) - Number(a))
+  return Array.from(new Set(years)).sort((a, b) => Number(b) - Number(a))
 }
 
 export default async function ResultsPage({ searchParams }: PageProps) {
