@@ -9,7 +9,7 @@ export const revalidate = 60
 
 export const metadata: Metadata = {
   title: 'Governance',
-  description: 'CIAF board members, constitution, meeting minutes and annual reports.',
+  description: 'CIAF Executive Committee, constitution, meeting minutes and annual reports.',
 }
 
 function formatDate(dateStr?: string) {
@@ -88,12 +88,12 @@ export default async function GovernancePage() {
       <div className="container-wide">
         <PageHeader
           title="Governance"
-          subtitle="CIAF is governed by an elected board and operates with full transparency through published documents."
+          subtitle="CIAF is governed by an elected Executive Committee and operates with full transparency through published documents."
         />
 
-        {/* Board Members */}
+        {/* Executive Committee */}
         <section className="mb-14">
-          <h2 className="font-barlow-condensed font-extrabold text-3xl text-ciaf-navy mb-2">Board of Directors</h2>
+          <h2 className="font-barlow-condensed font-extrabold text-3xl text-ciaf-navy mb-2">Executive Committee</h2>
           <div className="h-1 w-12 bg-ciaf-sky rounded mb-6" />
           {boardMembers && boardMembers.length > 0 ? (
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -102,7 +102,7 @@ export default async function GovernancePage() {
               ))}
             </div>
           ) : (
-            <p className="text-gray-400">Board member profiles coming soon.</p>
+            <p className="text-gray-400">Executive Committee profiles coming soon.</p>
           )}
         </section>
 

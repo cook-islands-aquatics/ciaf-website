@@ -26,7 +26,7 @@ export const structure: StructureResolver = (S) =>
             .title('People')
             .items([
               S.documentTypeListItem('coachOfficial').title('Coaches & Officials'),
-              S.documentTypeListItem('boardMember').title('Board Members'),
+              S.documentTypeListItem('boardMember').title('Executive Committee'),
             ])
         ),
       S.divider(),

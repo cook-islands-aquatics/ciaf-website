@@ -31,7 +31,7 @@ export const siteSettingsSchema = defineType({
       name: 'email',
       title: 'Contact Email',
       type: 'string',
-      initialValue: 'info@ciaf.ck',
+      initialValue: 'info@cookislandsaquatics.org',
     }),
     defineField({
       name: 'phone',

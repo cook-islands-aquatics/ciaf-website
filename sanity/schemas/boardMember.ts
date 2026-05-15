@@ -2,7 +2,7 @@ import { defineField, defineType } from 'sanity'
 
 export const boardMemberSchema = defineType({
   name: 'boardMember',
-  title: 'Board Member',
+  title: 'Executive Committee Member',
   type: 'document',
   fields: [
     defineField({

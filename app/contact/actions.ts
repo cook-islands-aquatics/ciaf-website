@@ -24,7 +24,7 @@ export async function sendContactForm(
   }
 
   const apiKey = process.env.RESEND_API_KEY
-  const toEmail = process.env.CONTACT_TO_EMAIL || 'info@ciaf.ck'
+  const toEmail = process.env.CONTACT_TO_EMAIL || 'info@cookislandsaquatics.org'
 
   if (apiKey) {
     try {
@@ -32,7 +32,7 @@ export async function sendContactForm(
       const resend = new Resend(apiKey)
 
       await resend.emails.send({
-        from: 'CIAF Website <noreply@ciaf.ck>',
+        from: 'Cook Islands Aquatics Federation <info@cookislandsaquatics.org>',
         to: [toEmail],
         reply_to: email,
         subject: `[CIAF Contact] ${subject}`,
