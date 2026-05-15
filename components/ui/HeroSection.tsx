@@ -47,14 +47,14 @@ export default function HeroSection({
 
       {/* World Aquatics member badge — top right */}
       <div className="absolute top-5 right-5 z-10">
-        <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-lg px-3 py-2 flex flex-col items-center gap-1.5">
-          <p className="text-[9px] font-semibold uppercase tracking-widest text-white/60">Member</p>
+        <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-xl px-5 py-3.5 flex flex-col items-center gap-2">
+          <p className="text-xs font-semibold uppercase tracking-widest text-white/60">Member</p>
           <Image
             src="/world-aquatics-logo.png"
             alt="World Aquatics"
-            width={90}
-            height={30}
-            className="h-7 w-auto brightness-0 invert"
+            width={160}
+            height={54}
+            className="h-12 w-auto brightness-0 invert"
           />
         </div>
       </div>

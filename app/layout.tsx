@@ -6,6 +6,7 @@ import Footer from '@/components/layout/Footer'
 import { sanityFetch } from '@/lib/sanity'
 import { siteSettingsQuery } from '@/lib/queries'
 import type { SiteSettings } from '@/lib/types'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const barlow = Barlow({
   subsets: ['latin'],
@@ -50,6 +51,7 @@ export default async function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer settings={settings} />
+        <SpeedInsights />
       </body>
     </html>
   )
