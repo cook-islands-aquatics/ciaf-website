@@ -37,9 +37,18 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const athlete = await sanityFetch<Athlete>({ query: athleteQuery, params: { slug: params.slug } })
   if (!athlete) return {}
+  const ogImage = athlete.photo
+    ? urlFor(athlete.photo).width(1200).height(630).url()
+    : '/hero.jpg'
   return {
     title: athlete.name,
     description: `${athlete.name} — Cook Islands ${athlete.discipline} athlete.`,
+    openGraph: {
+      title: `${athlete.name} | CIAF`,
+      description: `${athlete.name} — Cook Islands ${athlete.discipline} athlete.`,
+      images: [{ url: ogImage, width: 1200, height: 630 }],
+    },
+    twitter: { card: 'summary_large_image', images: [ogImage] },
   }
 }
 

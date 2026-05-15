@@ -35,6 +35,11 @@ export const metadata: Metadata = {
     siteName: 'Cook Islands Aquatics Federation',
     locale: 'en_NZ',
     type: 'website',
+    images: [{ url: '/hero.jpg', width: 1200, height: 630, alt: 'Cook Islands Aquatics Federation' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/hero.jpg'],
   },
 }
 
@@ -46,9 +51,33 @@ export default async function RootLayout({
   const settings: SiteSettings =
     (await sanityFetch<SiteSettings | null>({ query: siteSettingsQuery }).catch(() => null)) ?? {}
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SportsOrganization',
+    name: 'Cook Islands Aquatics Federation',
+    alternateName: 'CIAF',
+    url: 'https://ciaf.ck',
+    logo: 'https://ciaf.ck/ciaf-logo.png',
+    sport: ['Swimming', 'Open Water Swimming'],
+    email: settings.email ?? 'info@ciaf.ck',
+    memberOf: {
+      '@type': 'SportsOrganization',
+      name: 'World Aquatics',
+      url: 'https://www.worldaquatics.com',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'Cook Islands',
+    },
+  }
+
   return (
     <html lang="en" className={`${barlow.variable} ${barlowCondensed.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Navbar />
         <main>
             {children}
