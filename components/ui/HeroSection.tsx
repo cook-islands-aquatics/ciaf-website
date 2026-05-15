@@ -50,11 +50,11 @@ export default function HeroSection({
         <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-xl px-5 py-3.5 flex flex-col items-center gap-2">
           <p className="text-xs font-semibold uppercase tracking-widest text-white/60">Member</p>
           <Image
-            src="/world-aquatics-logo.png"
+            src="/world-aquatics-logo-rectangle.png"
             alt="World Aquatics"
-            width={160}
-            height={54}
-            className="h-12 w-auto brightness-0 invert"
+            width={300}
+            height={150}
+            className="w-48 brightness-0 invert"
           />
         </div>
       </div>
