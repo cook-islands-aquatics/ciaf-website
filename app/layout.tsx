@@ -63,7 +63,7 @@ export default async function RootLayout({
     url: 'https://cookislandsaquatics.org',
     logo: 'https://cookislandsaquatics.org/ciaf-logo.png',
     sport: ['Swimming', 'Open Water Swimming'],
-    email: settings.email ?? 'info@cookislandsaquatics.org',
+    email: settings.email ?? 'cookislandsaquatics@gmail.com',
     memberOf: {
       '@type': 'SportsOrganization',
       name: 'World Aquatics',

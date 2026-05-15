@@ -27,7 +27,8 @@
       "WebFetch(domain:pmn.co.nz)",
       "WebFetch(domain:pg2025.gems.pro)",
       "Bash(node scripts/import-results.mjs)",
-      "Bash(node scripts/update-athlete-bios.mjs)"
+      "Bash(node scripts/update-athlete-bios.mjs)",
+      "Bash(node scripts/import-news-oceania.mjs)"
     ]
   }
 }
