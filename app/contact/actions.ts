@@ -34,7 +34,7 @@ export async function sendContactForm(
       await resend.emails.send({
         from: 'CIAF Website <noreply@ciaf.ck>',
         to: [toEmail],
-        replyTo: email,
+        reply_to: email,
         subject: `[CIAF Contact] ${subject}`,
         text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
         html: `
