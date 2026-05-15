@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { sanityFetch } from '@/lib/sanity'
 import { newsSlugsQuery, athleteSlugsQuery, coachOfficialSlugsQuery } from '@/lib/queries'
 
-const BASE = 'https://ciaf.ck'
+const BASE = 'https://cookislandsaquatics.org'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [newsSlugs, athleteSlugs, coachSlugs] = await Promise.all([

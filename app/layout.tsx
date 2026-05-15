@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   description:
     'Official website of the Cook Islands Aquatics Federation — representing Cook Islands in Swimming and Open Water on the world stage.',
-  metadataBase: new URL('https://ciaf.ck'),
+  metadataBase: new URL('https://cookislandsaquatics.org'),
   openGraph: {
     siteName: 'Cook Islands Aquatics Federation',
     locale: 'en_NZ',
@@ -56,8 +56,8 @@ export default async function RootLayout({
     '@type': 'SportsOrganization',
     name: 'Cook Islands Aquatics Federation',
     alternateName: 'CIAF',
-    url: 'https://ciaf.ck',
-    logo: 'https://ciaf.ck/ciaf-logo.png',
+    url: 'https://cookislandsaquatics.org',
+    logo: 'https://cookislandsaquatics.org/ciaf-logo.png',
     sport: ['Swimming', 'Open Water Swimming'],
     email: settings.email ?? 'info@ciaf.ck',
     memberOf: {
