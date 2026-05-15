@@ -12,7 +12,22 @@
       "Bash(New-Item -ItemType Directory -Force -Path \"E:\\\\WebstormProjects\\\\ciaf-website\\\\app\\\\coaches-officials\\\\[slug]\")",
       "Bash(Out-Null)",
       "Bash(Write-Output \"done\")",
-      "Bash(mkdir -p \"E:/WebstormProjects/ciaf-website/app/coaches-officials/[slug]\")"
+      "Bash(mkdir -p \"E:/WebstormProjects/ciaf-website/app/coaches-officials/[slug]\")",
+      "Bash(node scripts/import-athletes.mjs)",
+      "WebSearch",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:www.cookislandsnews.com)",
+      "WebFetch(domain:oceaniaaquatics.org)",
+      "WebFetch(domain:mosaic.cis.edu.sg)",
+      "WebFetch(domain:www.fijivillage.com)",
+      "WebFetch(domain:www.swimcloud.com)",
+      "WebFetch(domain:www.rnz.co.nz)",
+      "WebFetch(domain:www.pakuranga.school.nz)",
+      "WebFetch(domain:www.olympics.com)",
+      "WebFetch(domain:pmn.co.nz)",
+      "WebFetch(domain:pg2025.gems.pro)",
+      "Bash(node scripts/import-results.mjs)",
+      "Bash(node scripts/update-athlete-bios.mjs)"
     ]
   }
 }

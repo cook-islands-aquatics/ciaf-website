@@ -35,12 +35,16 @@ export const metadata: Metadata = {
     siteName: 'Cook Islands Aquatics Federation',
     locale: 'en_NZ',
     type: 'website',
+    url: 'https://cookislandsaquatics.org',
     images: [{ url: '/hero.jpg', width: 1200, height: 630, alt: 'Cook Islands Aquatics Federation' }],
   },
   twitter: {
     card: 'summary_large_image',
     images: ['/hero.jpg'],
   },
+  ...(process.env.NEXT_PUBLIC_FB_APP_ID && {
+    other: { 'fb:app_id': process.env.NEXT_PUBLIC_FB_APP_ID },
+  }),
 }
 
 export default async function RootLayout({
