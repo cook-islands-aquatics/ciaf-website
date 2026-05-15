@@ -156,6 +156,19 @@ export const coachesByRoleQuery = groq`
   }
 `
 
+export const coachOfficialQuery = groq`
+  *[_type == "coachOfficial" && slug.current == $slug][0] {
+    _id, name, "slug": slug.current,
+    role, accreditationLevel,
+    photo { asset, alt, hotspot },
+    bio
+  }
+`
+
+export const coachOfficialSlugsQuery = groq`
+  *[_type == "coachOfficial" && defined(slug.current)] { "slug": slug.current }
+`
+
 // ─── Governance ───────────────────────────────────────────────────────────────
 
 export const boardMembersQuery = groq`

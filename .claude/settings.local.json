@@ -8,7 +8,11 @@
       "PowerShell(Get-ChildItem \"E:\\\\WebstormProjects\\\\ciaf-website\\\\public\" -Recurse | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\(\"E:\\\\WebstormProjects\\\\ciaf-website\\\\public\\\\\", \"\"\\) })",
       "WebFetch(domain:www.worldaquatics.com)",
       "WebFetch(domain:api.worldaquatics.com)",
-      "Bash(gh auth *)"
+      "Bash(gh auth *)",
+      "Bash(New-Item -ItemType Directory -Force -Path \"E:\\\\WebstormProjects\\\\ciaf-website\\\\app\\\\coaches-officials\\\\[slug]\")",
+      "Bash(Out-Null)",
+      "Bash(Write-Output \"done\")",
+      "Bash(mkdir -p \"E:/WebstormProjects/ciaf-website/app/coaches-officials/[slug]\")"
     ]
   }
 }
