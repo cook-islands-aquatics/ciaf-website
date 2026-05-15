@@ -12,6 +12,7 @@
     "@portabletext/react": "^3.1.0",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.50.0",
+    "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "groq": "^3.0.0",
     "next": "14.2.5",

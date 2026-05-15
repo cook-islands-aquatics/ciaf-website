@@ -7,6 +7,7 @@ import { sanityFetch } from '@/lib/sanity'
 import { siteSettingsQuery } from '@/lib/queries'
 import type { SiteSettings } from '@/lib/types'
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 
 const barlow = Barlow({
   subsets: ['latin'],
@@ -49,9 +50,12 @@ export default async function RootLayout({
     <html lang="en" className={`${barlow.variable} ${barlowCondensed.variable}`}>
       <body>
         <Navbar />
-        <main>{children}</main>
+        <main>
+            {children}
+            <SpeedInsights />
+            <Analytics />
+        </main>
         <Footer settings={settings} />
-        <SpeedInsights />
       </body>
     </html>
   )
